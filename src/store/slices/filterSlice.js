@@ -19,7 +19,6 @@ const filterSlice = createSlice({
       state.filtredBy.price = payload;
     },
     filterByAirlines: (state, { payload }) => {
-      console.log('payload', payload);
       state.filtredBy.airlines = payload;
     },
   },

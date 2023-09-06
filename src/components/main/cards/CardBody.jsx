@@ -4,7 +4,6 @@ import { getAirline, getRouteData } from '../../../utils/getRouteData';
 import clock from '../../../assets/clock.svg';
 
 const CardBody = ({ flight }) => {
-  console.log('cardbody', flight);
   const airline = getAirline(flight);
   const from = getRouteData(flight, 0);
   const back = getRouteData(flight, 1);

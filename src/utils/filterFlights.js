@@ -20,15 +20,17 @@ const filterByPrice = (filters, flights) => {
   const { priceFrom, priceTo } = price;
 
   if (priceFrom && !priceTo) {
+    console.log('no to', priceFrom && !priceTo);
     return flights.filter((el) => {
       const flightPrice = getTicketPrice(el.flight);
       return flightPrice >= priceFrom;
     });
   }
   if (!priceFrom && priceTo) {
+    console.log('no from', !priceFrom && priceTo);
     return flights.filter((el) => {
       const flightPrice = getTicketPrice(el.flight);
-      return flightPrice <= priceFrom;
+      return flightPrice <= priceTo;
     });
   }
 

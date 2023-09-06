@@ -2,12 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { actions as filterActions } from '../../../store/slices/filterSlice';
+import { getAirline, getTicketPrice } from '../../../utils/getRouteData';
 
 const FilterByAirlines = () => {
   const airlines = useSelector((state) => state.flights.airlines);
-  console.log('props', airlines);
+  const flights = useSelector((state) => state.flights.api);
   const [checkedAirlines, setCheckedAirlines] = useState([]);
   const dispatch = useDispatch();
+
+  const getMinPrice = (airline) => {
+    const prices = flights
+      .filter(({ flight }) => getAirline(flight) === airline)
+      .map(({ flight }) => getTicketPrice(flight));
+    return Math.min(...prices);
+  };
 
   const handleSubmit = (e) => {
     const { value } = e.target;
@@ -26,6 +34,7 @@ const FilterByAirlines = () => {
       <form className='flex-column'>
         {airlines &&
           airlines.map((airline) => {
+            const minPrice = getMinPrice(airline);
             return (
               <div key={airline}>
                 <input
@@ -36,7 +45,9 @@ const FilterByAirlines = () => {
                   onChange={handleSubmit}
                   //desabled={airlines.includes(airline) ? 'false' : undefined}
                 />
-                <label htmlFor='name_company'>- {airline}</label>
+                <label htmlFor='name_company'>
+                  - {airline} от <span>{minPrice} р.</span>
+                </label>
               </div>
             );
           })}

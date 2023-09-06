@@ -25,8 +25,6 @@ const App = () => {
 
   useEffect(() => {
     const filtred = filterFlights(filtredBy, sortedFlights);
-    console.log('filtred', filtred);
-
     const airlines = getAllAirlines(filtred);
     dispatch(flightsActions.filterFlights(filtred));
     dispatch(flightsActions.updateAirlines(airlines));

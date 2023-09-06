@@ -17,7 +17,7 @@ const FilterByTransfer = () => {
     <div className='sidebar__section-filter mb-15'>
       <p className='bold mb-15'>Фильтровать</p>
       <form>
-        <div className='inline-flex'>
+        <div>
           <input
             className='mr-5 mt-5'
             type='checkbox'
@@ -28,7 +28,7 @@ const FilterByTransfer = () => {
           />
           <label htmlFor='one-transfer'>- 1 пересадка</label>
         </div>
-        <div className='inline-flex'>
+        <div>
           <input
             className='mr-5'
             type='checkbox'

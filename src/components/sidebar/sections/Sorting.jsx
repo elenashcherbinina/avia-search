@@ -16,7 +16,7 @@ const Sorting = () => {
     <div className='sidebar__section-sorting mb-15'>
       <p className='bold mb-15'>Сортировать</p>
       <form>
-        <div className='inline-flex'>
+        <div>
           <input
             className='mr-5'
             type='radio'
@@ -27,7 +27,7 @@ const Sorting = () => {
           />
           <label htmlFor='low-to-hight'>- по возрастанию цены</label>
         </div>
-        <div className='inline-flex'>
+        <div>
           <input
             className='mr-5'
             type='radio'
@@ -38,7 +38,7 @@ const Sorting = () => {
           />
           <label htmlFor='hight-to-low'>- по убыванию цены</label>
         </div>
-        <div className='inline-flex'>
+        <div>
           <input
             className='mr-5'
             type='radio'

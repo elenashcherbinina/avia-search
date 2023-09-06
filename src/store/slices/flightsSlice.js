@@ -7,8 +7,12 @@ const { flights } = api.result;
 const flightsWithId = flights.map((el) => ({ flight: el.flight, id: el.flightToken }));
 const airlines = getAllAirlines(flightsWithId);
 
-const initialState = { api: flightsWithId, sorted: [], filtred: [], airlines };
-console.log('initialState', initialState);
+const initialState = {
+  api: flightsWithId,
+  sorted: [],
+  filtred: [],
+  airlines,
+};
 
 const flightsSlice = createSlice({
   name: 'flights',
