@@ -1,0 +1,69 @@
+@import './fonts.css';
+@import './variables.css';
+@import './index.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--primary-dark);
+}
+
+p,
+input,
+hr {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 20px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-22 {
+  font-size: 22px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+.color-orange {
+  color: var(--orange);
+}

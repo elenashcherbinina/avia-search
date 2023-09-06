@@ -1,0 +1,12 @@
+.sidebar {
+  height: 100%;
+  background-color: var(--grey);
+}
+
+.sidebar__container {
+  min-width: 200px;
+
+  margin: 30px 0;
+  padding: 10px;
+  background-color: var(--primary-white);
+}

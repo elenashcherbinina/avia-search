@@ -1,0 +1,134 @@
+.main {
+  width: 700px;
+  margin: 20px 0;
+
+  font-size: 16px;
+}
+
+.main__flightCards-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.main__flightCards-btn button {
+  height: 40px;
+  width: 250px;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+
+  color: var(--primary-white);
+  background-color: var(--blue);
+}
+
+.card__header-logo > img {
+  width: auto;
+  height: 40px;
+}
+
+.card__header-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card__body-route {
+  width: 90%;
+}
+
+.card__body_route > div {
+  padding: 10px 10px 10px 15px;
+}
+
+.card__body-direction {
+  position: relative;
+}
+
+.card__body-direction::after {
+  position: absolute;
+  bottom: 2px;
+  left: 1%;
+
+  width: 98%;
+  border-bottom: 1px solid var(--grey);
+  content: '';
+}
+
+.card__body-time {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+}
+
+.clock {
+  display: inline-flex;
+}
+
+.card__body-airCompany {
+  position: relative;
+}
+
+.card__body-airCompany::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+
+  width: 100%;
+  border-bottom: 2px solid var(--blue);
+
+  content: '';
+}
+
+.card__footer button {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+
+  color: var(--primary-white);
+  font-size: 17px;
+  background-color: var(--orange);
+  border: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.card__body-tranfer {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.card__body-tranfer span {
+  position: absolute;
+  top: -40%;
+
+  width: 20%;
+  background-color: var(--primary-white);
+}
+
+.card__body-tranfer::before {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+  width: 90%;
+  padding: 0;
+  border-bottom: 1.5px solid var(--grey);
+  content: '';
+}
